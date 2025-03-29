@@ -1,0 +1,33 @@
+.toolbar {
+  background-color: #1565c0; /* Azul escuro para representar carros */
+  color: white;
+  font-family: 'Roboto', sans-serif; /* Alterado para uma fonte mais comum */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 16px;
+  letter-spacing: 0.5px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+button[mat-button] {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+button[mat-button]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+mat-icon {
+  margin-right: 8px;
+  color: white;
+}

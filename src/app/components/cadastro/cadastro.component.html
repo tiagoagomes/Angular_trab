@@ -1,0 +1,137 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Cadastro de Carros</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <!-- Seção de Dados do Carro -->
+        <div class="form-section">
+          <h3 class="section-title">Dados do Carro</h3>
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>Modelo do Carro</mat-label>
+              <input matInput formControlName="modelo" placeholder="Digite o modelo do carro">
+              <mat-error *ngIf="form.get('modelo')?.hasError('required')">
+                Modelo é obrigatório
+              </mat-error>
+              <mat-error *ngIf="form.get('modelo')?.hasError('minlength')">
+                Modelo deve ter no mínimo 3 caracteres
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Tipo</mat-label>
+              <mat-select formControlName="tipo">
+                <mat-option *ngFor="let tipo of tipos" [value]="tipo">
+                  {{tipo}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="form.get('tipo')?.hasError('required')">
+                Tipo é obrigatório
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>Marca</mat-label>
+              <input matInput formControlName="marca" placeholder="Digite a marca">
+              <mat-error *ngIf="form.get('marca')?.hasError('required')">
+                Marca é obrigatória
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Ano</mat-label>
+              <input matInput type="number" formControlName="ano" placeholder="Ano de fabricação">
+              <mat-error *ngIf="form.get('ano')?.hasError('required')">
+                Ano é obrigatório
+              </mat-error>
+              <mat-error *ngIf="form.get('ano')?.hasError('min')">
+                Ano deve ser maior que 1886
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>Data de Aquisição</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="dataAquisicao">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error *ngIf="form.get('dataAquisicao')?.hasError('required')">
+                Data de aquisição é obrigatória
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <!-- Seção de Características -->
+        <div class="form-section">
+          <h3 class="section-title">Características</h3>
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>Tamanho</mat-label>
+              <mat-select formControlName="tamanho">
+                <mat-option *ngFor="let tamanho of tamanhos" [value]="tamanho">
+                  {{tamanho}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="form.get('tamanho')?.hasError('required')">
+                Tamanho é obrigatório
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Peso (kg)</mat-label>
+              <input matInput type="number" formControlName="peso" placeholder="0.00">
+              <mat-error *ngIf="form.get('peso')?.hasError('required')">
+                Peso é obrigatório
+              </mat-error>
+              <mat-error *ngIf="form.get('peso')?.hasError('min')">
+                Peso deve ser maior que zero
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>Combustível</mat-label>
+              <input matInput formControlName="combustivel" placeholder="Ex.: Gasolina, Diesel">
+              <mat-error *ngIf="form.get('combustivel')?.hasError('required')">
+                Combustível é obrigatório
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="form-field">
+            <mat-checkbox formControlName="automatico">
+              Câmbio Automático
+            </mat-checkbox>
+          </div>
+        </div>
+
+        <!-- Seção de Observações -->
+        <div class="form-section">
+          <h3 class="section-title">Observações</h3>
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Observações</mat-label>
+              <textarea matInput formControlName="observacoes" rows="3"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <!-- Botões de Ação -->
+        <div class="button-container">
+          <button mat-button type="button" (click)="onCancel()">Cancelar</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">
+            Salvar
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
