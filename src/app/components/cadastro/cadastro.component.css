@@ -2,9 +2,9 @@
   padding: 24px;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #f4f4f9; /* Alterado para um cinza claro mais moderno */
+  background-color: #f4f4f9;
   min-height: calc(100vh - 64px);
-  font-family: 'Roboto', sans-serif; /* Alterado para uma fonte mais comum */
+  font-family: 'DIN', sans-serif; /* Alterado para a fonte DIN */
 }
 
 mat-card {
@@ -12,12 +12,12 @@ mat-card {
   border-radius: 16px;
   overflow: hidden;
   background-color: #ffffff;
-  border: 1px solid #d1d9e6; /* Alterado para um cinza azulado */
+  border: 1px solid #d1d9e6;
 }
 
 mat-card-header {
-  background-color: #1565c0; /* Azul escuro para representar carros */
-  color: white;
+  background-color: #b71c1c; /* Vermelho escuro */
+  color: black; /* Alterado para preto */
   padding: 20px 32px;
   margin: 0;
   position: relative;
@@ -30,15 +30,16 @@ mat-card-header::after {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #1565c0, #42a5f5); /* Gradiente azul */
+  background: linear-gradient(90deg, #b71c1c, #f44336); /* Gradiente vermelho */
 }
 
 mat-card-title {
   font-size: 28px;
   font-weight: 600;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'DIN', sans-serif;
   letter-spacing: 0.5px;
+  color: black; /* Alterado para preto */
 }
 
 mat-card-content {
@@ -51,7 +52,7 @@ mat-card-content {
   padding: 32px;
   margin-bottom: 32px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  border: 1px solid #d1d9e6; /* Alterado para combinar com o tema */
+  border: 1px solid #d1d9e6;
   transition: transform 0.2s ease;
 }
 
@@ -60,13 +61,13 @@ mat-card-content {
 }
 
 .section-title {
-  color: #1565c0; /* Azul escuro */
+  color: #b71c1c; /* Vermelho escuro */
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 28px;
   padding-bottom: 12px;
   border-bottom: 2px solid #d1d9e6;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'DIN', sans-serif;
   letter-spacing: 0.5px;
 }
 
@@ -101,9 +102,9 @@ button[mat-raised-button] {
   padding: 0 40px;
   height: 52px;
   font-size: 16px;
-  background-color: #1565c0; /* Azul escuro */
-  color: white;
-  font-family: 'Roboto', sans-serif;
+  background-color: #b71c1c; /* Vermelho escuro */
+  color: black; /* Alterado para preto */
+  font-family: 'DIN', sans-serif;
   font-weight: 500;
   letter-spacing: 0.5px;
   border-radius: 8px;
@@ -111,17 +112,17 @@ button[mat-raised-button] {
 }
 
 button[mat-raised-button]:hover {
-  background-color: #0d47a1; /* Azul mais escuro */
+  background-color: #7f0000; /* Vermelho mais escuro */
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(21, 101, 192, 0.2);
+  box-shadow: 0 4px 8px rgba(183, 28, 28, 0.2);
 }
 
 button[mat-button] {
   padding: 0 40px;
   height: 52px;
   font-size: 16px;
-  color: #1565c0;
-  font-family: 'Roboto', sans-serif;
+  color: #b71c1c; /* Vermelho escuro */
+  font-family: 'DIN', sans-serif;
   font-weight: 500;
   letter-spacing: 0.5px;
   border-radius: 8px;
@@ -129,7 +130,7 @@ button[mat-button] {
 }
 
 button[mat-button]:hover {
-  background-color: #e3f2fd; /* Azul claro */
+  background-color: #ffebee; /* Vermelho claro */
   transform: translateY(-2px);
 }
 

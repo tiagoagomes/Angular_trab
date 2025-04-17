@@ -1,7 +1,7 @@
 .toolbar {
-  background-color: #1565c0; /* Azul escuro para representar carros */
-  color: white;
-  font-family: 'Roboto', sans-serif; /* Alterado para uma fonte mais comum */
+  background-color: #c62828; /* Vermelho escuro */
+  color: black; /* Texto preto */
+  font-family: 'DIN', sans-serif; /* Alterado para a fonte DIN */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -17,17 +17,17 @@
 }
 
 button[mat-button] {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'DIN', sans-serif; /* Alterado para a fonte DIN */
   font-size: 14px;
   font-weight: 500;
-  color: white;
+  color: black; /* Texto preto */
 }
 
 button[mat-button]:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.1); /* Fundo preto translúcido ao passar o mouse */
 }
 
 mat-icon {
   margin-right: 8px;
-  color: white;
+  color: black; /* Ícones pretos */
 }

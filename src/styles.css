@@ -1,27 +1,27 @@
 /* Global styles for the Car Management Application */
 
 html, body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, "Helvetica Neue", sans-serif;
-    background-color: #f4f4f9; /* Light gray background for a modern look */
-    color: #333; /* Dark text for better readability */
-  }
-  
-  header {
-    background-color: #007bff; /* Blue header to represent cars */
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 0.5rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
+  height: 100%;
+  margin: 0;
+  font-family: DIN, Arial, "Helvetica Neue", sans-serif; /* Adicionada a fonte DIN */
+  background-color: #f4f4f9; /* Light gray background for a modern look */
+  color: #333; /* Dark text for better readability */
+}
+
+header {
+  background-color: #ff0000; /* Vermelho como cor principal */
+  color: #000; /* Preto para as letras */
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
